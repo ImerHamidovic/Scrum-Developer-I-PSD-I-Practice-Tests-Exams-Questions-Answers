@@ -260,7 +260,7 @@ button.secondary:hover {
     }
 
     header p {
-        font-size: 14px;
+        display: none; /* Hide subtitle on mobile to save space */
     }
 
     .mode-selection {
