@@ -33,7 +33,6 @@ const btnExitPractice = document.getElementById('btn-exit-practice');
 const btnExitExam = document.getElementById('btn-exit-exam');
 const btnBackToMenu = document.getElementById('btn-back-to-menu');
 const btnCheckAnswer = document.getElementById('btn-check-answer');
-const btnReloadQuestions = document.getElementById('btn-reload-questions');
 const btnBookmarks = document.getElementById('btn-bookmarks');
 const btnJumpPractice = document.getElementById('btn-jump-practice');
 const btnJumpExam = document.getElementById('btn-jump-exam');
@@ -76,7 +75,6 @@ fetch('/api/questions')
 btnPractice.addEventListener('click', () => startPracticeMode());
 btnBookmarks.addEventListener('click', startBookmarksMode);
 btnExam.addEventListener('click', startExamMode);
-btnReloadQuestions.addEventListener('click', reloadQuestions);
 btnExitPractice.addEventListener('click', showMenu);
 btnExitExam.addEventListener('click', () => {
     if (confirm("Are you sure you want to exit the exam? All progress will be lost.")) {
@@ -237,26 +235,7 @@ function showMenu() {
     mainMenu.classList.remove('hidden');
 }
 
-function reloadQuestions() {
-    if (!confirm('This will force a re-parse of the README file. Continue?')) return;
 
-    loadingDiv.innerText = 'Reloading questions...';
-    loadingDiv.classList.remove('hidden');
-    mainMenu.classList.add('hidden');
-
-    fetch('/api/questions?force=true')
-        .then(res => res.json())
-        .then(data => {
-            allQuestions = data;
-            loadingDiv.classList.add('hidden');
-            mainMenu.classList.remove('hidden');
-            alert(`Successfully loaded ${data.length} questions.`);
-        })
-        .catch(err => {
-            loadingDiv.innerText = 'Error reloading questions.';
-            console.error(err);
-        });
-}
 
 function hideAllSections() {
     mainMenu.classList.add('hidden');
@@ -569,7 +548,7 @@ function finishExam() {
     if (percentage >= 85) {
         msgEl.innerHTML = '<span style="color: #4ec9b0; font-size: 20px;">🎉 PASSED! 🎉</span>';
     } else {
-        msgEl.innerHTML = '<span style="color: #ce9178; font-size: 20px;">failed. (Pass mark is 85%)</span>';
+        msgEl.innerHTML = '<span style="color: #ce9178; font-size: 20px;">❌ FAILED. (Pass mark is 85%)</span>';
     }
 
     // Generate questions summary

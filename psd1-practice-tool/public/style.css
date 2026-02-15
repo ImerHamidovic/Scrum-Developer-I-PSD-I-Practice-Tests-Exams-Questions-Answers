@@ -206,20 +206,27 @@ button.secondary:hover {
         width: 100%;
         padding: 10px;
         max-width: 100%;
-        overflow: hidden;
         height: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: stretch;
+    }
+
+    #practice-area:not(.hidden),
+    #exam-area:not(.hidden),
+    #result-area:not(.hidden) {
+        flex: 1;
     }
 
     #practice-area,
     #exam-area {
         display: flex;
         flex-direction: column;
-        min-height: 100vh;
-        min-height: 100dvh; /* Dynamic viewport height for mobile browsers */
-        max-height: 100vh;
-        max-height: 100dvh;
+        height: 100%;
         overflow: hidden;
         position: relative;
+        justify-content: flex-start;
     }
 
     /* Result area should scroll normally */
@@ -233,9 +240,7 @@ button.secondary:hover {
     #main-menu {
         display: flex;
         flex-direction: column;
-        justify-content: center;
-        min-height: calc(100vh - 80px); /* Account for header */
-        min-height: calc(100dvh - 80px);
+        justify-content: flex-start;
         overflow-y: auto;
         height: auto;
     }
@@ -274,7 +279,7 @@ button.secondary:hover {
 
     header h1 {
         font-size: 24px;
-        margin: 10px 0 5px 0;
+        margin: 0 0 20px 0;
     }
 
     header p {
@@ -282,7 +287,7 @@ button.secondary:hover {
     }
 
     header {
-        margin-bottom: 10px;
+        margin-bottom: 0;
         flex-shrink: 0;
     }
 
@@ -325,8 +330,7 @@ button.secondary:hover {
 
     /* Submit/flag buttons - compact */
     #btn-submit-early,
-    #btn-filter-failed,
-    #btn-reload-questions {
+    #btn-filter-failed {
         padding: 8px 12px;
         font-size: 13px;
     }
