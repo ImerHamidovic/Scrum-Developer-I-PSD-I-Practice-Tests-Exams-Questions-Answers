@@ -209,17 +209,52 @@ button.secondary:hover {
 
     .mode-selection {
         flex-direction: column;
-        gap: 10px;
+        gap: 12px;
+        margin-bottom: 20px;
     }
 
-    button {
+    /* Main menu buttons - full width and spaced */
+    .mode-selection button {
         width: 100%;
-        padding: 12px 16px;
-        font-size: 15px;
+        padding: 14px 20px;
+        font-size: 16px;
+    }
+
+    /* Navigation and action buttons - more compact */
+    .controls button {
+        padding: 10px 14px;
+        font-size: 14px;
+        flex: 1;
+        min-width: 0;
+        white-space: nowrap;
+    }
+
+    /* Check Answer button should be prominent but not too big */
+    #btn-check-answer {
+        flex: 1.2;
+    }
+
+    /* Exit buttons - smaller */
+    #btn-exit-practice,
+    #btn-exit-exam,
+    #btn-back-to-menu {
+        padding: 8px 12px;
+        font-size: 14px;
+        width: auto;
+        display: inline-block;
+    }
+
+    /* Submit/flag buttons - compact */
+    #btn-submit-early,
+    #btn-filter-failed,
+    #btn-reload-questions {
+        padding: 8px 12px;
+        font-size: 13px;
     }
 
     .question-card {
         padding: 15px;
+        margin-bottom: 15px;
     }
 
     .question-text {
@@ -227,12 +262,9 @@ button.secondary:hover {
     }
 
     .controls {
-        flex-direction: column;
-        gap: 10px;
-    }
-
-    .controls button {
-        width: 100%;
+        flex-direction: row;
+        gap: 8px;
+        flex-wrap: wrap;
     }
 
     .timer {
@@ -248,6 +280,34 @@ button.secondary:hover {
     #practice-jump-input,
     #exam-jump-input {
         width: 60px !important;
+        padding: 6px !important;
+        font-size: 14px;
+    }
+
+    #btn-jump-practice,
+    #btn-jump-exam {
+        padding: 6px 12px;
+        font-size: 13px;
+    }
+
+    /* Practice/Exam header sections */
+    #practice-area > div:first-child,
+    #exam-area > div {
+        flex-wrap: wrap;
+        gap: 10px;
+    }
+
+    /* Progress and controls wrapper */
+    #practice-area > div:nth-child(2),
+    #exam-area > div:nth-child(3) {
+        flex-wrap: wrap;
+        gap: 8px;
+        row-gap: 12px;
+    }
+
+    #practice-progress,
+    #exam-progress {
+        font-size: 14px;
     }
 }
 
@@ -269,5 +329,10 @@ button.secondary:hover {
         width: 18px;
         height: 18px;
         margin-right: 10px;
+    }
+
+    .controls button {
+        padding: 8px 10px;
+        font-size: 13px;
     }
 }
