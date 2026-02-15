@@ -317,7 +317,18 @@ function renderQuestion(index, mode) {
                 <button class="bookmark-btn ${isBookmarked ? 'active' : ''}" onclick="toggleBookmark(${question.id}, ${index}, '${mode}')" title="${isBookmarked ? 'Remove Bookmark' : 'Bookmark Question'}">
                     ${isBookmarked ? '★' : '☆'}
                 </button>
-            </div>
+            </div>`;
+
+    // Display images if present
+    if (question.images && question.images.length > 0) {
+        html += '<div class="question-images" style="margin-bottom: 15px; text-align: center;">';
+        question.images.forEach(img => {
+            html += `<img src="${escapeHtml(img.src)}" alt="${escapeHtml(img.alt)}" style="max-width: 100%; height: auto; border: 1px solid #3c3c3c; border-radius: 4px; margin: 5px auto; display: block;">`;
+        });
+        html += '</div>';
+    }
+
+    html += `
             <div class="question-meta">Select ${question.expectedAnswers} option(s).</div>
             <div class="options-list">
     `;

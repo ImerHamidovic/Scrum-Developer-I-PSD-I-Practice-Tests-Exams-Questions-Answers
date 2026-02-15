@@ -10,6 +10,9 @@ const CACHE_FILE = path.join(__dirname, 'questions.json');
 // Serve static files from the 'public' directory
 app.use(express.static(path.join(__dirname, 'public')));
 
+// Serve images from the parent directory's images folder
+app.use('/images', express.static(path.join(__dirname, '..', 'images')));
+
 // API Endpoint to get questions
 app.get('/api/questions', (req, res) => {
     const force = req.query.force === 'true';

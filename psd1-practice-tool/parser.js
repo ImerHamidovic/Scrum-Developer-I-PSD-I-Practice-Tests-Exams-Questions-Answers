@@ -18,7 +18,9 @@ function parseQuestions() {
                 if (currentQuestion) {
                     // Check if it has options, otherwise it might be a header we don't want or incomplete
                     if (currentQuestion.options.length > 0) {
-                         questions.push(currentQuestion);
+                        // Extract images from question text
+                        extractImages(currentQuestion);
+                        questions.push(currentQuestion);
                     }
                 }
 
@@ -27,7 +29,8 @@ function parseQuestions() {
                     id: questions.length + 1,
                     question: line.replace('### ', '').trim(),
                     options: [],
-                    expectedAnswers: 0
+                    expectedAnswers: 0,
+                    images: []
                 };
             } else if (line.startsWith('- [ ]') || line.startsWith('- [x]')) {
                 if (currentQuestion) {
@@ -57,6 +60,7 @@ function parseQuestions() {
 
         // Push the last question
         if (currentQuestion && currentQuestion.options.length > 0) {
+            extractImages(currentQuestion);
             questions.push(currentQuestion);
         }
 
@@ -65,6 +69,21 @@ function parseQuestions() {
         console.error('Error reading or parsing README.md:', err);
         return [];
     }
+}
+
+function extractImages(question) {
+    // Regular expression to match markdown images: ![alt](path)
+    const imageRegex = /!\[([^\]]*)\]\(([^)]+)\)/g;
+    let match;
+
+    while ((match = imageRegex.exec(question.question)) !== null) {
+        const alt = match[1];
+        const src = match[2];
+        question.images.push({ alt, src });
+    }
+
+    // Remove image markdown from question text
+    question.question = question.question.replace(imageRegex, '').trim();
 }
 
 module.exports = { parseQuestions };
