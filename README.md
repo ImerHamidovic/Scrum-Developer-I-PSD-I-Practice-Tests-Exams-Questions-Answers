@@ -16,6 +16,12 @@
 
 ## �🚀 Quick Start
 
+### Remote Hosting
+
+The practice tool is hosted for free on Render. You can access it here:
+[https://scrum-developer-i-psd-i-practice-tool.onrender.com/](https://scrum-developer-i-psd-i-practice-tool.onrender.com/)
+
+### Manual Hosting
 ```bash
 # Clone this repository
 git clone https://github.com/ImerHamidovic/Scrum-Developer-I-PSD-I-Practice-Tests-Exams-Questions-Answers.git
