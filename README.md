@@ -1,164 +1,77 @@
-# ⬆️ Scrum Developer I for PSD I Practice Tests Exams Questions & Answers
+# 🎯 PSD-I Interactive Practice Tool
 
-![Promotional image](images/promotional.png)
+> Interactive web-based practice tool for Professional Scrum Developer I (PSD-I) from Scrum.org exam preparation
 
-## ❣ Support
+## ✨ Features
 
-There are many ways to support us; in exchange, you'll get this material in a proper format:
+- 📝 **Practice Mode** - Study questions with instant feedback and explanations
+- ⏱️ **Exam Mode** - Timed 60-minute exam simulation (85% pass threshold)
+- 🔖 **Bookmarks** - Save difficult questions for later review
+- 📊 **Progress Tracking** - View detailed results and performance analytics
+- 🎯 **300+ Questions** - Comprehensive coverage of all PSD-I exam topics
+- ⌨️ **Keyboard Navigation** - Efficient browsing with arrow keys and shortcuts
+- 🎲 **Randomized Options** - Prevents answer memorization
 
-- ❤️ [shop.ditectrev.com, in EPUB or PDF formats, with answers marked](https://shop.ditectrev.com/product/scrum-developer-i-for-psd-i-practice-tests-exams-questions-answers),
-- ❤️ [shop.ditectrev.com, in EPUB or PDF formats, without answers marked](https://shop.ditectrev.com/product/scrum-developer-i-for-psd-i-practice-tests-exams-questions-no-answers),
-- 📖 [Udemy is the only one to have explanations for questions](https://www.udemy.com/course/professional-scrum-developer-i-psd-i-practice-exams/?referralCode=E1E5C69CF22100D112DD),
-- 📚 [Google Play Books, in PDF format, with answers marked](https://play.google.com/store/books/details?id=9Lb7EAAAQBAJ),
-- 📚 [Google Play Books, in PDF format, without answers marked](https://play.google.com/store/books/details?id=8rb7EAAAQBAJ),
-- 🛍️ [Etsy, in PDF format, with answers marked](https://ditectrev.etsy.com/listing/1343003141),
-- 🛍️ [Etsy, in PDF format, without answers marked](https://ditectrev.etsy.com/listing/1520218324),
-- 🛒 [eBay, in PDF format, with answers marked](https://www.ebay.com/itm/405227132219?mkcid=16&mkevt=1&mkrid=711-127632-2357-0&ssspo=_ptbuk3gqdw&sssrc=2524149&ssuid=_ptbuk3gqdw&widget_ver=artemis&media=COPY),
-- 🛒 [eBay, in PDF format, without answers marked](https://www.ebay.com/itm/405227131692?mkcid=16&mkevt=1&mkrid=711-127632-2357-0&ssspo=_ptbuk3gqdw&sssrc=2524149&ssuid=_ptbuk3gqdw&widget_ver=artemis&media=COPY),
-- 🔄 [Patreon subscription allows you to get access to all of the materials in EPUB and PDF formats. You can also buy separate items on Patreon, but the subscription technically allows us to include all updates for EPUB and PDF formats. Hence, you get EPUB and PDF updates when you subscribe to Patreon](https://patreon.com/Ditectrev?utm_medium=unknown&utm_source=join_link&utm_campaign=creatorshare_creator&utm_content=copyLink).
+## 🚀 Quick Start
 
-💰 If you work for a company, you could probably easily claim this expense while preparing for your exam. For us, it's about being in the game or not.
+```bash
+# Clone this repository
+git clone https://github.com/ImerHamidovic/Scrum-Developer-I-PSD-I-Practice-Tests-Exams-Questions-Answers.git
+cd Scrum-Developer-I-PSD-I-Practice-Tests-Exams-Questions-Answers/psd1-practice-tool
 
-⭐ Good ratings & reviews help us to survive. Please don't forget to leave a nice one when you purchase an item.
+# Install dependencies
+npm install
 
-## 👩‍💻 & 👨‍💻 Interactive Course(s)
+# Start the server
+npm start
+```
 
-It's great to learn these questions as your exam preparation, and, yes, you should pass just based on that. However, we highly recommend more interactive learning if you want to become an expert. Currently, we're recommending those courses:
+Then open your browser to `http://localhost:3000`
 
-- 🎬 [Coursera: video-based, official course by IBM](https://imp.i384100.net/9LYq23).
-- 📖 [Educative: text-based, video-free course, including set up out-of-the-box for you Cloud Labs to practice hands-on without the need to set up an environment (and payments). The link includes the highest available discount Educative offers](https://www.educative.io/courses/development-a-guide-to-modern-software-delivery?aff=VALz).
+📖 **For detailed usage instructions, see [psd1-practice-tool/README.md](psd1-practice-tool/README.md)**
 
-Yes, we have a little commission from these links. Therefore, by using these links, you're supporting us.
+## 📚 About This Project
 
-## ✨ This course is unlike any Scrum Developer I for PSD I course you will find online.
+This repository combines:
+- **Interactive Practice Tool** - Built by [Imer Hamidovic](https://github.com/ImerHamidovic)
+- **Question Collection** - Originally created and maintained by [Ditectrev](https://github.com/Ditectrev/Scrum-Developer-I-PSD-I-Practice-Tests-Exams-Questions-Answers)
 
-✋ Join a live online community and a course taught by industry experts and pass the Scrum Developer I (PSD I) confidently. We aim to build an ecosystem of Information Technology (IT) certifications and online courses in cooperation with the technology industry. We believe it will give our students 100% confidence in the pacing market in an open-source environment. We are just at the beginning of our way, so it's even better for you to join now!
+### Credits & Attribution
 
-[![Join our Discord](images/discord.png 'Join our Discord')](https://discord.gg/RFjtXKfJy3)
+The questions in this repository are sourced from Ditectrev's excellent open-source collection. Their team has curated and maintained these questions since 2021, with regular updates and improvements. Please visit their original repository for additional resources and to support their work.
 
-## ⌛️ Short and to the point; why should you take the course:
+**Original Repository:** [Ditectrev/Scrum-Developer-I-PSD-I-Practice-Tests-Exams-Questions-Answers](https://github.com/Ditectrev/Scrum-Developer-I-PSD-I-Practice-Tests-Exams-Questions-Answers)
 
-1. Always happy to answer your questions on Udemy's Q&A's and outside :)
-2. Failed? Please submit a screenshot of your exam result and request a refund (via our upcoming platform, not possible on Udemy); we'll always accept it.
-3. Learn about topics, such as:
-   - Architecture & Design;
-   - Class Coupling;
-   - Code Quality;
-   - Coding Best Practices;
-   - Continuous Delivery (CD);
-   - Continuous Deployment (CD);
-   - Continuous Integration (CI);
-   - Cross-Functional Teams;
-   - Cycle Time per Feature;
-   - Cyclomatic Complexity;
-   - Definition of Done (DoD);
-   - Documentation;
-   - Don't Repeat Yourself (DRY);
-   - Efferent Couplings;
-   - Keep It Simple, Stupid (KISS);
-   - Mocking;
-   - Scrum Framework;
-   - Software Architecture;
-   - Software Design;
-   - SOLID Principles;
-   - Spying;
-   - Stubbing;
-   - Technical Debt;
-   - Test Driven Development (TDD);
-   - Test First Development (TFD);
-   - **Much More!**
-4. Questions are similar to the actual exam, without duplications (like in other courses ;-)).
-5. The Practice Tests Exams simulate the actual exam's content, timing, and percentage required to pass the exam.
-6. This course is **not** a Scrum Developer I (PSD I) Exam Dump. Some people use brain dumps or exam dumps, but that's absurd, which we don't practice.
-7. 305 **unique** questions.
+### Keeping Questions Up-to-Date
 
-## ☝️ Course Updates
+This fork is periodically synced with the upstream repository to ensure you have access to the latest questions and corrections.
 
-**[v1.0.0](../../releases/tag/v1.0.0): November 12, 2021.**
+### What You'll Learn
 
-- Launch of the course.
+Topics covered include:
+- Architecture & Design
+- Code Quality & Best Practices
+- Continuous Integration/Delivery/Deployment (CI/CD)
+- Cross-Functional Teams
+- Definition of Done (DoD)
+- Test Driven Development (TDD)
+- Scrum Framework fundamentals
+- SOLID Principles
+- Technical Debt Management
+- Software Architecture patterns
+- And much more!
 
-**[v1.0.1](../../releases/tag/v1.0.1): August 24, 2022.**
+## 🙋 Contributing
 
-- Minor improvements since the course launch with a relaunch of the course due to misunderstanding Udemy rules by using unfortunate keywords in the title.
+Found an issue with the practice tool or have a feature suggestion? Please open an issue or submit a pull request!
 
-**[v1.0.2](../../releases/tag/v1.0.2): October 10, 2022.**
+For questions about the question content itself, please refer to the [upstream repository](https://github.com/Ditectrev/Scrum-Developer-I-PSD-I-Practice-Tests-Exams-Questions-Answers).
 
-- Fixing 1 question w/minor improvements.
+## 📄 License
 
-**[v1.0.3](../../releases/tag/v1.0.3): November 2, 2022.**
+This project maintains the same license as the original question repository. The practice tool code is open source and available for use and modification.
 
-- Fix 1 question w/minor improvements.
-
-**[v1.1.0](../../releases/tag/v1.1.0): December 5, 2022.**
-
-- Fix several questions.
-
-**[v1.2.0](../../releases/tag/v1.2.0): January 10, 2023.**
-
-- Fix 6 questions w/a minor typo in incorrect answer.
-
-**[v1.3.0](../../releases/tag/v1.3.0): March 14, 2023.**
-
-- Add 11 new questions w/minor improvements.
-
-**[v1.4.0](../../releases/tag/v1.4.0): April 22, 2023.**
-
-- Add (yet another) 11 new questions, fixes a couple of wrong answers, and minor typos.
-
-**[v1.4.1](../../releases/tag/v1.4.1): July 24, 2023.**
-
-- Fix 3 questions.
-
-**[v1.5.0](../../releases/tag/v1.5.0): November 3, 2023.**
-
-- Add 3 new questions and correct 1 question with a number of valid answers.
-
-**[v1.5.1](../../releases/tag/v1.5.1): February 9, 2024.**
-
-- Improve 2 questions with answer fix and proper title.
-
-**[v1.5.2](../../releases/tag/v1.5.2): April 12, 2024.**
-
-- Fix 3 questions with wrong answers.
-
-**[v1.5.2](../../releases/tag/v1.5.2): September 4, 2024.**
-
-- AI-generated explanations (only paid [Udemy](https://www.udemy.com/course/professional-scrum-developer-i-psd-i-practice-exams/?referralCode=E1E5C69CF22100D112DD)).
-
-**[v1.6.0](../../releases/tag/v1.6.0): January 24, 2025.**
-
-- Update outdated terminology, delete 1 duplicated question, and add 1 new question.
-
-**[v1.6.1](../../releases/tag/v1.6.1): September 27, 2025.**
-
-- Fix literally 1 question with a wrong answer.
-
-## 🙋‍♀️ & 🙋‍♂️ Contribution
-
-We are so thankful for every contribution, which makes sure we can deliver top-notch content. Whenever you find a missing resource, broken link in a [Table of Contents](#table-of-contents), the wrong answer, please submit an [issue](../../issues). Even better would be a [Pull Request (PR)](../../pulls).
-
-## Who this course is for:
-
-- 👨‍🎓 Students preparing for the Scrum Developer I (PSD I) Exam;
-- 👨‍🎓 Agile Coaches;
-- 👨‍🎓 Agile Leaders;
-- 👨‍🎓 DevOps Engineers;
-- 👨‍🎓 IT Professionals;
-- 👨‍🎓 Lead Engineers;
-- 👨‍🎓 Scrum Masters;
-- 👨‍🎓 Software Developers/Engineers;
-- 👨‍🎓 Software Testers;
-- 👨‍🎓 Product Managers;
-- 👨‍🎓 Product Owners;
-- 👨‍🎓 Project Managers;
-- 👨‍🎓 Team Leaders.
-
-## Requirements
-
-- 🤩 Excitement to learn!
-- 0️⃣ Prior knowledge is required;
-- ✅ You can pass the Scrum Developer I (PSD I) Exam solely based on our Practice Tests Exams.
+---
 
 ## Table of Contents
 

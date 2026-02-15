@@ -1,0 +1,30 @@
+#practice-question-container,
+#exam-question-container {
+    height: 60vh;
+    min-height: 400px;
+    overflow-y: auto;
+    padding-right: 10px;
+    margin-bottom: 20px;
+}
+
+/* Custom Scrollbar for Webkit */
+#practice-question-container::-webkit-scrollbar,
+#exam-question-container::-webkit-scrollbar {
+    width: 10px;
+}
+
+#practice-question-container::-webkit-scrollbar-track,
+#exam-question-container::-webkit-scrollbar-track {
+    background: #1e1e1e;
+}
+
+#practice-question-container::-webkit-scrollbar-thumb,
+#exam-question-container::-webkit-scrollbar-thumb {
+    background: #3c3c3c;
+    border-radius: 5px;
+}
+
+#practice-question-container::-webkit-scrollbar-thumb:hover,
+#exam-question-container::-webkit-scrollbar-thumb:hover {
+    background: #4c4c4c;
+}

@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PSD I Practice Tool</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="bookmark.css">
+    <link rel="stylesheet" href="scroll.css">
+    <link rel="stylesheet" href="input.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>PSD I Practice Tool</h1>
+            <p>Master your Scrum Developer I Certification</p>
+        </header>
+
+        <div id="loading" style="text-align: center;">Loading questions...</div>
+
+        <div id="main-menu" class="hidden">
+            <div class="mode-selection">
+                <button id="btn-practice">Practice Mode</button>
+                <button id="btn-exam">Exam Simulation</button>
+                <button id="btn-bookmarks" class="secondary" title="Review questions you have bookmarked">★ Review Bookmarks</button>
+            </div>
+            <p style="text-align: center; color: #858585;">
+                <strong>Practice Mode:</strong> Go through all questions with immediate feedback.<br>
+                <strong>Exam Simulation:</strong> 80 random questions, 60 minutes, check results at the end.<br>
+                <strong>Review Bookmarks:</strong> Practice only the questions you have flagged.
+            </p>
+            <div style="text-align: center; margin-top: 30px;">
+                 <button id="btn-reload-questions" class="secondary" style="font-size: 14px; padding: 5px 10px;">↻ Reload Questions from README</button>
+            </div>
+        </div>
+
+        <!-- Practice Mode Interface -->
+        <div id="practice-area" class="hidden">
+            <div style="display: flex; justify-content: space-between; align-items: center;">
+                <button class="secondary" id="btn-exit-practice">← Back to Menu</button>
+                <h2 id="practice-mode-title" style="margin: 0; font-size: 1.2em; color: #858585;">Practice</h2>
+            </div>
+            <div style="margin-top: 20px; margin-bottom: 20px; display: flex; justify-content: space-between; align-items: center;">
+                <span id="practice-progress">Question 1 / X</span>
+                <div class="jump-control">
+                    <input type="number" id="practice-jump-input" min="1" style="width: 50px; padding: 5px; border-radius: 4px; border: 1px solid #3c3c3c; background: #252526; color: #d4d4d4;" placeholder="#">
+                    <button class="secondary" id="btn-jump-practice" style="padding: 5px 10px;">Go</button>
+                </div>
+            </div>
+            <div id="practice-question-container"></div>
+            <div class="controls">
+                <button id="btn-prev-practice" disabled>Previous</button>
+                <button id="btn-check-answer">Check Answer</button>
+                <button id="btn-next-practice">Next</button>
+            </div>
+        </div>
+
+        <!-- Exam Mode Interface -->
+        <div id="exam-area" class="hidden">
+            <button class="secondary" id="btn-exit-exam" style="margin-bottom: 10px;">← Exit Exam</button>
+            <div class="timer" id="exam-timer">60:00</div>
+            <div style="margin-top: 10px; margin-bottom: 20px; display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 10px;">
+                <span id="exam-progress">Question 1 / 80</span>
+                 <div class="jump-control">
+                    <input type="number" id="exam-jump-input" min="1" max="80" style="width: 50px; padding: 5px; border-radius: 4px; border: 1px solid #3c3c3c; background: #252526; color: #d4d4d4;" placeholder="#">
+                    <button class="secondary" id="btn-jump-exam" style="padding: 5px 10px;">Go</button>
+                </div>
+                <button class="secondary" id="btn-submit-early" style="padding: 5px 10px; font-size: 14px;">Submit Exam</button>
+            </div>
+            <div id="exam-question-container"></div>
+            <div class="controls">
+                <button id="btn-prev-exam" disabled>Previous</button>
+                <button id="btn-flag-exam" class="secondary">Flag for Review</button>
+                <button id="btn-next-exam">Next</button>
+            </div>
+        </div>
+
+        <!-- Result Area -->
+        <div id="result-area" class="hidden">
+            <div class="score-display">
+                <h2>Exam Finished!</h2>
+                <p>Your Score: <span id="final-score">0</span>%</p>
+                <p>Correct: <span id="correct-count">0</span> / 80</p>
+                <p>Time Taken: <span id="time-taken">00:00</span></p>
+                <p id="pass-fail-msg"></p>
+            </div>
+            <div id="questions-summary" style="margin-top: 30px;">
+                <div style="display: flex; justify-content: space-between; align-items: center; border-bottom: 2px solid #4ec9b0; padding-bottom: 10px; margin-bottom: 20px;">
+                    <h3 style="margin: 0;">Questions Review</h3>
+                    <button id="btn-filter-failed" class="secondary" style="padding: 8px 15px; font-size: 14px;">Show Failed Only</button>
+                </div>
+                <div id="questions-summary-list"></div>
+            </div>
+            <div style="text-align: center; margin-top: 30px;">
+                <button id="btn-back-to-menu">Back to Menu</button>
+            </div>
+        </div>
+
+    </div>
+    <script src="app.js"></script>
+</body>
+</html>

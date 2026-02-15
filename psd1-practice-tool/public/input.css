@@ -1,0 +1,9 @@
+input[type="number"] {
+    color-scheme: dark;
+}
+
+input[type=number]::-webkit-inner-spin-button,
+input[type=number]::-webkit-outer-spin-button {
+    opacity: 1;
+    cursor: pointer;
+}
