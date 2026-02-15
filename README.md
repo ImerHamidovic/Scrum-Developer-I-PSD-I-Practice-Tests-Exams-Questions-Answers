@@ -12,7 +12,9 @@
 - ⌨️ **Keyboard Navigation** - Efficient browsing with shortcuts
 - 🎲 **Randomized Options** - Prevents answer memorization
 
-## 🚀 Quick Start
+![PSD-I Practice Tool Preview](images/preview.png)
+
+## �🚀 Quick Start
 
 ```bash
 # Clone this repository

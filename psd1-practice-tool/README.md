@@ -4,6 +4,8 @@
 
 The PSD-I Practice Tool is an interactive web-based application designed to help you prepare for the Professional Scrum Developer I (PSD-I) certification exam. It parses questions from the repository's README and provides multiple study modes.
 
+![PSD-I Practice Tool](../images/preview.png)
+
 ## Installation
 
 ### Prerequisites
