@@ -193,9 +193,65 @@ button.secondary:hover {
 
 /* Mobile Responsiveness */
 @media (max-width: 768px) {
+    body {
+        padding-bottom: 0;
+    }
+
     .container {
-        width: 95%;
+        width: 100%;
         padding: 10px;
+        max-width: 100%;
+    }
+
+    #practice-area,
+    #exam-area {
+        display: flex;
+        flex-direction: column;
+        height: calc(100vh - 20px); /* Account for padding */
+        overflow: hidden;
+    }
+
+    /* Result area should scroll normally */
+    #result-area {
+        overflow-y: auto;
+        height: auto;
+        padding-bottom: 20px;
+    }
+
+    /* Main menu should scroll if needed */
+    #main-menu {
+        overflow-y: auto;
+        height: auto;
+    }
+
+    /* Scrollable content area */
+    #practice-question-container,
+    #exam-question-container {
+        flex: 1;
+        overflow-y: auto;
+        overflow-x: hidden;
+        margin-bottom: 10px;
+        padding-bottom: 80px; /* Space for fixed controls */
+        -webkit-overflow-scrolling: touch; /* Smooth scrolling on iOS */
+    }
+
+    /* Fixed controls at bottom */
+    #practice-area .controls,
+    #exam-area .controls {
+        position: fixed;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        background-color: #1e1e1e;
+        padding: 12px 10px;
+        margin: 0;
+        box-shadow: 0 -2px 10px rgba(0, 0, 0, 0.5);
+        z-index: 100;
+        border-top: 1px solid #3c3c3c;
+        display: flex;
+        flex-direction: row;
+        gap: 8px;
+        justify-content: space-between;
     }
 
     header h1 {
@@ -257,14 +313,13 @@ button.secondary:hover {
         margin-bottom: 15px;
     }
 
-    .question-text {
-        font-size: 16px;
+    .question-card img {
+        max-width: 100%;
+        height: auto;
     }
 
-    .controls {
-        flex-direction: row;
-        gap: 8px;
-        flex-wrap: wrap;
+    .question-text {
+        font-size: 16px;
     }
 
     .timer {
@@ -292,7 +347,11 @@ button.secondary:hover {
 
     /* Practice/Exam header sections */
     #practice-area > div:first-child,
-    #exam-area > div {
+    #practice-area > div:nth-child(2),
+    #exam-area > div:first-child,
+    #exam-area > div:nth-child(2),
+    #exam-area > div:nth-child(3) {
+        flex-shrink: 0;
         flex-wrap: wrap;
         gap: 10px;
     }
