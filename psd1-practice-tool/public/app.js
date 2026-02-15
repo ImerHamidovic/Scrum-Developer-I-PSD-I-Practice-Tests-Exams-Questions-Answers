@@ -109,15 +109,30 @@ function shuffleArray(array) {
     return shuffled;
 }
 
+// Get determines if an option should stay at the bottom
+function shouldStayAtBottom(optionText) {
+    const text = optionText.toLowerCase();
+    return text.includes('all of the above') ||
+           text.includes('all of these') ||
+           text.includes('all the above');
+}
+
 // Get or create shuffled options for a question
 function getShuffledOptions(question) {
     if (!shuffledOptionsMap[question.id]) {
-        // Create shuffled version with original indices
+        // Create indexed version with original indices
         const indexed = question.options.map((opt, idx) => ({
             ...opt,
             originalIndex: idx
         }));
-        shuffledOptionsMap[question.id] = shuffleArray(indexed);
+
+        // Separate options that should stay at bottom
+        const bottomOptions = indexed.filter(opt => shouldStayAtBottom(opt.text));
+        const regularOptions = indexed.filter(opt => !shouldStayAtBottom(opt.text));
+
+        // Shuffle only regular options and append bottom options
+        const shuffled = shuffleArray(regularOptions);
+        shuffledOptionsMap[question.id] = [...shuffled, ...bottomOptions];
     }
     return shuffledOptionsMap[question.id];
 }
