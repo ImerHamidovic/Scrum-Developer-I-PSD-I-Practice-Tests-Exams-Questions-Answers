@@ -4,7 +4,7 @@ const fs = require('fs');
 const { parseQuestions } = require('./parser');
 
 const app = express();
-const PORT = 3000;
+const PORT = process.env.PORT || 3000;
 const CACHE_FILE = path.join(__dirname, 'questions.json');
 
 // Serve static files from the 'public' directory
