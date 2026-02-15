@@ -42,7 +42,7 @@ Perfect for learning and studying:
 2. Read the question and select your answer(s)
 3. Click "Check Answer" to see if you're correct
 4. Green = Correct, Red = Incorrect
-5. Use navigation buttons or arrow keys to move between questions
+5. Use navigation buttons move between questions
 6. Click the bookmark icon to save questions
 
 ### ⏱️ Exam Mode
@@ -184,69 +184,6 @@ To reset bookmarks:
 // In browser console:
 localStorage.removeItem('psd1_bookmarks');
 ```
-
-## Troubleshooting
-
-### Questions Not Loading
-
-1. Check that README.md exists in parent directory
-2. Verify README format matches expected structure
-3. Try force reload: `http://localhost:3000/api/questions?force=true`
-4. Check server console for parsing errors
-
-### Port Already in Use
-
-```bash
-# Find process using port 3000
-lsof -i :3000
-
-# Kill the process
-kill -9 <PID>
-```
-
-### Bookmarks Not Persisting
-
-- Check browser localStorage is enabled
-- Try a different browser
-- Check for private/incognito mode (may restrict storage)
-
-## Development
-
-### Adding New Features
-
-1. **Client-side changes**: Edit `public/app.js` and CSS files
-2. **Server-side changes**: Edit `server.js`
-3. **Parser updates**: Modify `parser.js`
-4. Restart server to see changes
-
-### Debug Mode
-
-Add console logging in `parser.js`:
-
-```javascript
-console.log('Parsed questions:', questions.length);
-```
-
-### Testing Parser
-
-```javascript
-// In parser.js
-const { parseQuestions } = require('./parser');
-const questions = parseQuestions();
-console.log(JSON.stringify(questions, null, 2));
-```
-
-## Future Enhancements
-
-Potential improvements:
-- [ ] User accounts and cloud sync
-- [ ] Detailed analytics and study recommendations
-- [ ] Mobile app version
-- [ ] Explanations for each answer
-- [ ] Custom exam duration
-- [ ] Export results as PDF
-- [ ] Dark mode
-- [ ] Multiple language support
 
 ## Contributing
 
