@@ -166,6 +166,12 @@ document.addEventListener('keydown', (e) => {
             }
         }
 
+        // Exam Mode: If on last question, submit exam
+        if (currentMode === 'exam' && currentIndex === currentQuestions.length - 1) {
+            finishExam();
+            return;
+        }
+
         const nextBtn = document.getElementById(`btn-next-${currentMode}`);
         if (nextBtn && !nextBtn.disabled) {
             navigateQuestion(1, currentMode);
@@ -493,6 +499,11 @@ function updateTimerDisplay(seconds) {
 }
 
 function finishExam() {
+    // Ask for confirmation before submitting
+    if (!confirm('Are you sure you want to submit the exam? You cannot change your answers after submission.')) {
+        return;
+    }
+
     stopTimer();
     hideAllSections();
     resultArea.classList.remove('hidden');
