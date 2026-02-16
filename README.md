@@ -24,8 +24,8 @@ The practice tool is hosted for free on Render. You can access it here:
 ### Manual Hosting
 ```bash
 # Clone this repository
-git clone https://github.com/ImerHamidovic/Scrum-Developer-I-PSD-I-Practice-Tests-Exams-Questions-Answers.git
-cd Scrum-Developer-I-PSD-I-Practice-Tests-Exams-Questions-Answers/psd1-practice-tool
+git clone https://github.com/ImerHamidovic/Scrum-Developer-I-PSD-I-Practice-Tool
+cd Scrum-Developer-I-PSD-I-Practice-Tool/psd1-practice-tool
 
 # Install dependencies
 npm install
